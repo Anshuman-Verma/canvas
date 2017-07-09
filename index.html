@@ -2,14 +2,48 @@
 <html lang="en">
 <head>
   <meta charset = "UTF-8">
-  <script src = "src/canvas.js"></script>
   <link href = "favicon.ico" rel="icon" type = "image/x-icon">
-  <link rel = "stylesheet" href = "src/style.css">
+  <link rel="stylesheet" type="text/css" href="src/css/style.css">
+  <script src="src/js/canvas.js"></script>
+  <script src="src/js/jscolor.js"></script>
   <title>Canvas Playground</title>
 </head>
 <body>
 
 <canvas id="draw" width="100vw" height="100vh"></canvas>
+<script>
+</script>
+<style>
+  html, body {
+    margin:0;
+  }
+</style>
+<!-- Begin palette -->
+<div class="strip content">
+	<div id="palette">
+		<div id="preview">
+			This is how your canvas<br />
+			will have the colors.<br />
+			<big>made with &hearts; by Anshuman and Monal</big>
+		</div>
+		<div class="panel fgcolor">
+			<button id="fgcolor-button" class="jscolor-active">Choose foreground</button>
+				<table>
+					<tr><td><input id="fgcolor-rgb" onchange="setString('fgcolor', this.value)" /></td><th>RGB</th></tr>
+					<tr><td><input id="fgcolor-hex" onchange="setString('fgcolor', this.value)" /></td><th>HEX</th></tr>
 
+					<tr><td>&deg; <input id="fgcolor-hue" class="short" onchange="setHSV('fgcolor', this.value, null, null)" /></td><th>H</th></tr>
+					<tr><td>% <input id="fgcolor-sat" class="short" onchange="setHSV('fgcolor', null, this.value, null)" /></td><th>S</th></tr>
+					<tr><td>% <input id="fgcolor-val" class="short" onchange="setHSV('fgcolor', null, null, this.value)" /></td><th>V</th></tr>
+
+					<tr class="red"><td><input id="fgcolor-red" class="short" onchange="setRGB('fgcolor', this.value, null, null)" /></td><th>R</th></tr>
+					<tr class="grn"><td><input id="fgcolor-grn" class="short" onchange="setRGB('fgcolor', null, this.value, null)" /></td><th>G</th></tr>
+					<tr class="blu"><td><input id="fgcolor-blu" class="short" onchange="setRGB('fgcolor', null, null, this.value)" /></td><th>B</th></tr>
+				</table>
+		</div>
+		<script type="text/javascript" src="src/js/palette.js"></script>
+	</div>
+</div>
+<!-- End palette -->
 </body>
 </html>
