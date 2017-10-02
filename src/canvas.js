@@ -50,4 +50,8 @@ window.addEventListener('load', function () {
 	canvas.addEventListener('mouseup',() => isDrawing = false);
 	canvas.addEventListener('mouseout', () => isDrawing = false);
 
+	const btnClear = document.querySelector("#clear");
+	btnClear.addEventListener("click", () => {
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+	})
 });

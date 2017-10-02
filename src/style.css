@@ -47,3 +47,10 @@ html, body {
 .btn:active {
 	transform:scale(.9);
 }
+
+/* PAGE CONTAINER */
+button#clear {
+	position:absolute;
+	top:15px;
+	right:15px;
+}
